@@ -1,0 +1,172 @@
+html {
+    background-color: black;
+}
+body {
+    font-family: Arial, sans-serif;
+    text-transform: uppercase;
+    width: 1310px;
+    margin: 0 auto;
+    color: white;
+}
+h1, h2 {
+    font-size: 40px;
+}
+h1 {
+    margin-left: 1em;
+    color: #007D7B;
+}
+h2 {
+    margin: 0 0 10px;
+    clear: both;
+}
+section ~ section h2{
+    padding-top: 12px;
+}
+nav h2, form h3 {
+    visibility: hidden;
+    position: absolute;
+}
+p {
+    font-size: 20px;
+    margin: 0;
+    line-height: 1.25;
+    text-transform: none;
+}
+
+/*HEADER & NAV*/
+h1, nav, nav ul, nav li {
+    display: inline-block;
+}
+nav li:nth-last-child(n+3) {
+    margin-right: 130px;
+}
+nav li:first-child{
+    margin-left: 260px;
+}
+nav ul{
+    list-style: none;
+}
+nav a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 20px;
+}
+nav a:hover {
+    color:#007D7B;
+}
+[href="#top"] {
+    display: block;
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    background-color: #007D7B;
+    width: 3ch;
+    text-align: center;
+    padding: 2px 24px;
+}
+[href="#top"]:hover {
+    background-color: white;
+    color: #007D7B;
+}
+
+/*MAIN*/
+main {
+    color: black;
+    background-color: white;
+    padding: 12px;
+    
+    overflow: auto; /*clearfix*/
+}
+.about > * {
+    float: right;
+    width: 420px;
+    text-align: right;
+    margin-right: 12px;
+}
+.about img {
+    width: 850px;
+    float: left;
+    margin-right: 0;
+}
+figure {
+    margin: 10px 0 0 12px;
+    width: 420px;
+    float: left;
+    position: relative;
+}
+figure:nth-child(3n) {
+    margin-left: 0;
+}
+figcaption.white { /*default is black, so only need to style white*/
+    color: white;
+}
+/*CAPTIONS-default & top left*/
+figcaption {
+    position: absolute;
+    margin: 6px 6px 18px;
+    top: 0;
+}
+/*CAPTIONS-bottom left*/
+[src*="Italy"] ~ figcaption, [src*="Switzerland"] ~ figcaption {
+    top: auto;
+    bottom: 0;
+}
+/*CAPTIONS-bottom right*/
+[src*="Hawaii"] ~ figcaption, [src*="Ireland"] ~ figcaption, [src*="Moab"] ~ figcaption, [src*="UK"] ~ figcaption {
+    top: auto;
+    bottom: 0;
+    right: 26px;
+}
+[src*="Moab"] ~ figcaption {
+    right: 40px;
+}
+[src*="UK"] ~ figcaption {
+    right: 18px;
+}
+/*FORM*/
+form {
+    font-size: 16px;
+    margin: 0 auto;
+}
+form > * {
+    text-align: left;
+    display: block;
+    width: 850px;
+    margin: 0 auto;
+    font-style: normal;
+}
+label {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+input {
+    height: 36px;
+}
+::placeholder, [type="submit"] {
+    color: #007D7B;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-family: inherit;
+    padding: 10px;
+    font-weight: bold;
+}
+[type="submit"]{
+    background-color: #007D7B;
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+    border-radius: 14px;
+    width: 30%;
+    height: 46px;
+}
+
+/*FOOTER*/
+footer {
+    text-align: center;
+    padding: 12px;
+}
+footer p:last-child { /*this styles the copyright line*/
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 60px;
+}
