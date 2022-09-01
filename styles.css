@@ -22,7 +22,7 @@ h2 {
 section ~ section h2{
     padding-top: 12px;
 }
-nav h2, footer form h3 {
+nav h2, footer h3 {
     visibility: hidden;
     position: absolute;
 }
