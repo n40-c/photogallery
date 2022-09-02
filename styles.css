@@ -22,7 +22,7 @@ h2 {
 section ~ section h2{
     padding-top: 12px;
 }
-nav h2, footer h3 {
+nav h2, h3 {
     visibility: hidden;
     position: absolute;
 }
@@ -70,12 +70,17 @@ nav a:hover {
 }
 
 /*MAIN*/
-main {
+main section:nth-last-child(n+2) {
     color: black;
     background-color: white;
-    padding: 12px;
-    
-    overflow: auto; /*clearfix*/
+    padding: 12.5px 12.5px 10px;
+    overflow: auto;
+}
+main section:nth-child(1) {
+    padding-bottom: 0;
+}
+main section:nth-child(2) {
+    padding-top: 0;
 }
 .about > * {
     float: right;
@@ -124,6 +129,10 @@ figcaption {
     right: 18px;
 }
 /*FORM*/
+.contact {
+    color: white;
+    text-align: center;
+}
 form {
     font-size: 16px;
     margin: 0 auto;
@@ -160,12 +169,9 @@ input {
 }
 
 /*FOOTER*/
-footer {
+footer p {
     text-align: center;
-    padding: 12px;
-}
-footer p:last-child { /*this styles the copyright line*/
     text-transform: uppercase;
     font-weight: bold;
-    margin-top: 60px;
+    margin: 50px 0 30px;
 }
